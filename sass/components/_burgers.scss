@@ -1,0 +1,42 @@
+.burger {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    overflow: visible;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.line {
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 1rem;
+    background-color: black;
+    display: block;
+}
+
+.line1 {
+    transform: translateY(-1rem);
+}
+
+.line3 {
+    transform: translateY(1rem);
+}
+
+#disappear {
+    .line2 {
+        opacity: 1;
+        transition: all 200ms ease;
+        transition-property: opacity, translate;
+    }
+
+    &.open {
+        .line2 {
+            opacity: 0;
+            transform: translateX(-1rem);
+        }
+    }
+}

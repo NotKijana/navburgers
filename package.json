@@ -4,7 +4,7 @@
   "description": "A collection of navigation burgers. Each one will have a different animation. The goal is to practice basic frontend fundamentals, while making reusable code for future projects.",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel watch-sass live-server",
+    "start": "npm-run-all --parallel live-server watch-sass",
     "watch-sass": "node-sass -w sass/main.scss css/styles.css",
     "live-server": "live-server"
   },
