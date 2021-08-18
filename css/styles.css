@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -11,12 +12,19 @@ body {
   box-sizing: border-box;
   position: relative; }
 
-#container {
-  width: 100%;
-  max-width: 180rem;
-  margin: 0 auto;
-  background-color: black;
-  padding: 1rem; }
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif; }
+
+.burger_type {
+  font-size: 2rem;
+  color: #f5f5f5;
+  text-shadow: rgba(8, 8, 8, 0.3) 1px 1px 5px; }
+
+.header_main {
+  font-size: 3rem; }
+
+.header_sub {
+  font-size: 1.5rem; }
 
 .burger {
   cursor: pointer;
@@ -29,18 +37,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
-  background-color: red; }
+  z-index: 10; }
 
 .line {
   width: 5rem;
   height: 0.5rem;
   border-radius: 1rem;
-  background-color: black;
+  background-color: #f5f5f5;
   display: block;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  box-shadow: rgba(8, 8, 8, 0.3) 1px 1px 5px; }
 
 .line1 {
   top: 0rem; }
@@ -59,7 +67,7 @@ body {
 
 #disappear.open .line1 {
   transform: translateX(-50%) rotate(45deg);
-  top: 1.5rem; }
+  top: 1.25rem; }
 
 #disappear.open .line2 {
   opacity: 0;
@@ -67,10 +75,13 @@ body {
 
 #disappear.open .line3 {
   transform: translateX(-50%) rotate(-45deg);
-  top: 50%; }
+  top: 1.25rem; }
 
 #collapse .line {
-  transition: top 75ms ease-in, transform 50ms ease-in 75ms,  opacity 50ms ease-in 50ms; }
+  transition: top 125ms ease 50ms, transform 50ms ease,  opacity 50ms ease 50ms; }
+
+#collapse.open .line {
+  transition: top 125ms ease, transform 50ms ease 125ms,  opacity 50ms ease 75ms; }
 
 #collapse.open .line1 {
   transform: translateX(-50%) rotate(45deg);
@@ -83,6 +94,56 @@ body {
   transform: translateX(-50%) rotate(-45deg);
   top: 1.25rem; }
 
+#spin {
+  transition: transform 150ms ease 25ms; }
+  #spin .line {
+    transform: transform 75ms opacity 25s ease; }
+  #spin.open {
+    transform: translate(-50%, -50%) rotate(180deg); }
+    #spin.open .line1 {
+      transform: translateX(-50%) rotate(45deg);
+      top: 1.25rem; }
+    #spin.open .line2 {
+      opacity: 0; }
+    #spin.open .line3 {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 1.25rem; }
+
+#stand {
+  transition: transform 150ms ease; }
+  #stand .line {
+    transform: transform ease 75ms 100ms opacity 25s ease 100ms; }
+  #stand.open {
+    transform: translate(-50%, -50%) rotate(90deg); }
+    #stand.open .line1 {
+      transform: translateX(-50%) rotate(45deg);
+      top: 1.25rem; }
+    #stand.open .line2 {
+      opacity: 0; }
+    #stand.open .line3 {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 1.25rem; }
+
+#minus .line {
+  transition: top 75ms ease; }
+
+#minus.open .line1 {
+  top: 1.25rem; }
+
+#minus.open .line3 {
+  top: 1.25rem; }
+
+#basic.open .line1 {
+  transform: translateX(-50%) rotate(-45deg);
+  top: 1.25rem; }
+
+#basic.open .line2 {
+  opacity: 0; }
+
+#basic.open .line3 {
+  transform: translateX(-50%) rotate(45deg);
+  top: 1.25rem; }
+
 .grid {
   list-style: none;
   display: grid;
@@ -91,7 +152,32 @@ body {
   width: 100%; }
 
 .grid_item {
-  background-color: gray;
   height: 100%;
   width: 100%;
   position: relative; }
+  .grid_item.item1 {
+    background-color: #f94144; }
+  .grid_item.item2 {
+    background-color: #43aa8b; }
+  .grid_item.item3 {
+    background-color: #6411ad; }
+  .grid_item.item4 {
+    background-color: #70e000; }
+  .grid_item.item5 {
+    background-color: #f8961e; }
+  .grid_item.item6 {
+    background-color: #00509d; }
+
+.burger_type {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.header {
+  position: relative;
+  height: 20rem;
+  text-align: center;
+  padding-top: 5rem; }
+  .header_sub {
+    margin-top: 0.5rem; }
