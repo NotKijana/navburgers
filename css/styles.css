@@ -18,7 +18,7 @@ body {
 .burger_type {
   font-size: 2rem;
   color: #f5f5f5;
-  text-shadow: rgba(8, 8, 8, 0.3) 1px 1px 5px; }
+  text-shadow: rgba(8, 8, 8, 0.1) 1px 1px 5px; }
 
 .header_main {
   font-size: 3rem; }
@@ -48,7 +48,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: rgba(8, 8, 8, 0.3) 1px 1px 5px; }
+  box-shadow: rgba(8, 8, 8, 0.1) 1px 1px 5px; }
 
 .line1 {
   top: 0rem; }
